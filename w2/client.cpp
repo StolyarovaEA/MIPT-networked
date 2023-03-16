@@ -9,7 +9,8 @@ void input_async(ENetPeer* lobby, ENetPeer* server)
   {
     std::string input;
     std::getline(std::cin, input);
-     if (!strcmp(input.data(), "start")) {
+    if (!strcmp(input.data(), "start")) \
+    {
       printf("Starting the game...\n");
       const char *msg = "start";
       ENetPacket *packet = enet_packet_create(msg, strlen(msg) + 1, ENET_PACKET_FLAG_RELIABLE);
